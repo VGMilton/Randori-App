@@ -1,0 +1,9 @@
+<ion-app>
+  <div class="background">
+    <app-sidenav (onToggleSideNav)="onToggleSideNav($event)"></app-sidenav>
+    <app-body
+      [collapsed]="isSideNavCollapsed"
+      [screenWidth]="screenWidth"
+    ></app-body>
+  </div>
+</ion-app>

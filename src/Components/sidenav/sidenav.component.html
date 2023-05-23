@@ -1,0 +1,34 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed':''">
+  <div class="logo-container">
+    <button class="logo" (click)="toggleCollapse()">
+      <ion-img src="../../assets/person.svg"></ion-img>
+    </button>
+    <div class="logo-desc"*ngIf="collapsed">
+      <div class="logo-text">Milton Velasquez</div>
+      <div class="logo-status" >Administrador</div>
+    </div>
+
+    <a class="logo-setting"*ngIf="collapsed"
+      [routerLink]="['settings']"
+      routerLinkActive = "active"
+      [routerLinkActiveOptions]="{exact:true}">
+        <ion-img src="../../assets/settings.svg"></ion-img>
+
+    </a>
+
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData" >
+      <a class="sidenav-nav-link" [routerLink]="[data.routelink]"
+      routerLinkActive = "active"
+      [routerLinkActiveOptions]="{exact:true}">
+        <ion-img class="sidenav-link-icon" [src]="data.icon"></ion-img>
+        <span class="sidenav-link-text" *ngIf="collapsed" >{{data.label}}</span>
+      </a>
+    </li>
+
+  </ul>
+  <button class="sidenav-exit" (click)="closeSidenav()">
+    <ion-img src="../../assets/exit.svg" *ngIf="collapsed"></ion-img>
+  </button>
+</div>

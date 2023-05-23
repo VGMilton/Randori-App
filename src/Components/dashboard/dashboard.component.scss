@@ -1,0 +1,55 @@
+.main{
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #fff;
+  justify-content: center;
+  align-items: center;
+  font-size: 400%;
+  white-space: nowrap;
+  right: 7.37rem;
+
+}
+.main-info{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.main-info-punch{
+  width: 9.37rem;
+  height: 7.81rem;
+}
+
+@media (min-width: 412px) and (max-width: 768px) {
+  .main{
+    right: 5rem;
+    font-size: 200%;
+  }
+  .main-info-punch{
+    width: 4.65rem;
+    height: 3.9rem;
+  }
+}
+
+@media (max-width: 412px) {
+  .main{
+    right: 5rem;
+    font-size: 200%;
+    right: 1rem;
+
+  }
+  .main-info-punch{
+    width: 4.65rem;
+    height: 3.9rem;
+  }
+}
+
+
+
+
+
+
+
+
